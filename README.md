@@ -3,6 +3,8 @@ jQuery Touch
 
 jQuery Plugin for touch events
 
+[http://upwards.github.com/jquery-touch/](http://upwards.github.com/jquery-touch/)
+
 version 1.0.0
 
 autor Alexey Kupriyanenko (a.kupriyanenko@gmail.com)
