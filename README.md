@@ -26,7 +26,7 @@ Methods
 
 ### touchleave
 
-    $('#elem')touchleave(function(event) {
+    $('#elem').touchleave(function(event) {
         $(this).text('touchleave');
     })
 
