@@ -1,5 +1,5 @@
 /*!
- * jQuery Touch Plugin 1.0.0
+ * jQuery Touch Plugin 1.0.1
  * https://github.com/upwards/jquery-touch
  *
  * @autor Alexey Kupriyanenko (a.kupriyanenko@gmail.com)
@@ -42,6 +42,7 @@
 
       return this;
     },
+
     // Bind an event handler to the "touchend" JavaScript event.
     touchend: function(fn) {
       $(this).each(function() {
@@ -56,6 +57,7 @@
 
       return this;
     },
+
     // Bind an event handler to the "touchmove" JavaScript event.
     touchmove: function(fn) {
       $(this).each(function() {
@@ -81,6 +83,7 @@
 
       return this;
     },
+
     // Bind an event handler to the "touchup" JavaScript event.
     touchup: function(fn) {
       $(this).each(function() {
@@ -122,6 +125,31 @@
 
       return this;
     },
+
+    touchclick: function(fn) {
+      $(this).each(function() {
+        if (this == undefined)
+          return;
+        
+        var that = this;
+        var notClick = false;
+
+        that.addEventListener('touchstart', function(event) {
+          notClick = false;
+        }, false);
+
+        that.addEventListener('touchmove', function(event) {
+          notClick = true;
+        }, false);
+
+        that.addEventListener('touchend', function(event) {
+          if (!notClick) fn.call(that);
+        }, false);
+      })
+
+      return this;
+    },
+
     // Bind an event handler to the "touchleave" JavaScript event.
     touchleave: function(fn) {
       $(this).each(function() {
@@ -147,6 +175,7 @@
 
       return this;
     },
+    
     // Bind an event handler to the "touchenter" JavaScript event.
     touchenter: function(fn) {
       $(this).each(function() {
