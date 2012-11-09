@@ -3,38 +3,57 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>jQuery Touch by upwards</title>
-
+    <title>jQuery Touch by kupriyanenko</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
-    <div class="wrapper">
+
       <header>
         <h1>jQuery Touch</h1>
         <p></p>
-
-        <p class="view"><a href="https://github.com/upwards/jquery-touch">View the Project on GitHub <small>upwards/jquery-touch</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/upwards/jquery-touch/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/upwards/jquery-touch/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/upwards/jquery-touch">View On <strong>GitHub</strong></a></li>
-        </ul>
       </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/kupriyanenko/jquery-touch" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/kupriyanenko/jquery-touch/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/kupriyanenko/jquery-touch/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
       <section>
-        <h1>Query Plugin for touch events</h1>
+        <h1>jQuery Touch</h1>
+
+<p>jQuery Plugin for touch events</p>
 
 <p>version 1.0.0</p>
+
+<p>autor Alexey Kupriyanenko (<a href="mailto:a.kupriyanenko@gmail.com">a.kupriyanenko@gmail.com</a>)</p>
+
+<p><a href="http://upwards.github.com/jquery-touch/">http://upwards.github.com/jquery-touch/</a></p>
 
 <h2>Methods</h2>
 
 <h3>touchstart</h3>
+
+<p>Start touch event</p>
 
 <pre><code>$('#elem').touchstart(function(event) {
     $(this).text('touchstart');
@@ -43,12 +62,16 @@
 
 <h3>touchend</h3>
 
+<p>Ent touch event</p>
+
 <pre><code>$('#elem').touchend(function(event) {
     $(this).text('touchend');
 })
 </code></pre>
 
 <h3>touchleave</h3>
+
+<p>Leave touch event</p>
 
 <pre><code>$('#elem').touchleave(function(event) {
     $(this).text('touchleave');
@@ -57,6 +80,8 @@
 
 <h3>touchenter</h3>
 
+<p>Enter touch event</p>
+
 <pre><code>$('#elem').touchenter(function(event) {
     $(this).text('touchenter');
 })
@@ -64,12 +89,25 @@
 
 <h3>touchup</h3>
 
+<p>Listen touch event after move over element</p>
+
 <pre><code>$('#elem').touchup(function(event) {
     $(this).text('touchup');
 })
 </code></pre>
 
+<h3>touchclick</h3>
+
+<p>Click touch event</p>
+
+<pre><code>$('#elem').touchclick(function(event) {
+    $(this).text('touchup');
+})
+</code></pre>
+
 <h3>touchmove</h3>
+
+<p>Listen move touch event</p>
 
 <pre><code>$('#elem').touchmove(function(event) {
     $(this).css({
@@ -80,11 +118,11 @@
 </code></pre>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/upwards">upwards</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>Project maintained by <a href="https://github.com/kupriyanenko">kupriyanenko</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
 </html>
